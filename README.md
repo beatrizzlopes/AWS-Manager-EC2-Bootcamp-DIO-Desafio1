@@ -63,6 +63,8 @@ Snapshot: é uma cópia pontual de um determinado volume. você pode tirar snaps
 
 ## Referências
 https://web.dio.me/track/santander-code-girls-2025
+## Feito por:
+Anna Beatriz
 
 
 
