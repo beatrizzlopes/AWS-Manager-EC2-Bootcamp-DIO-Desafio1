@@ -15,7 +15,7 @@ Quaisquer arquivos adicionais que sejam relevantes para documentar sua experiên
 Opcionalmente, capturas de tela relevantes organizadas em uma pasta /images.
 
 ## Material presente no repositório
-Arquivo README.md: Explicação detalhada do desafio, insights e anotações principais do módulo de Gerenciamento de Instâncias EC2.
+Arquivo README.md: Explicação detalhada do desafio e anotações principais do módulo de Gerenciamento de Instâncias EC2.
 
 anotaçoesdesafio1.md: Registro do passo a passo do desafio.
 
@@ -56,8 +56,6 @@ Snapshot: é uma cópia pontual de um determinado volume. você pode tirar snaps
 
 ## Diagrama de interação dos serviços AWS.
 
-
-## Insights do desafio
 
 
 
