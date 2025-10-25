@@ -108,12 +108,10 @@ A arquitetura foi projetada para oferecer escalabilidade, segurança e automaç�
 
 8. Quando solicitado, o EC2 gera um link temporário (presigned URL) para download do livro.
 
-## Referências
-https://web.dio.me/track/santander-code-girls-2025
-
 ## Autora
 Beatriz Lopes
 
-
+## Referências
+https://web.dio.me/track/santander-code-girls-2025
 
 
