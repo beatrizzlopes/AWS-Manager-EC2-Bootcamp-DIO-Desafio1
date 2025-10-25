@@ -86,11 +86,32 @@ Resumo da interação:
 O usuário cria uma instância EC2 a partir de uma AMI → usa EBS para armazenamento → snapshots desses volumes são salvos no S3.
 
 ## Desafio diagrama de arquitetura
+
+O objetivo deste projeto é desenvolver um sistema simples e eficiente para o armazenamento e gerenciamento de livros digitais em nuvem, utilizando serviços da AWS.
+A arquitetura foi projetada para oferecer escalabilidade, segurança e automação, substituindo o servidor local da biblioteca por uma solução totalmente hospedada na nuvem.
 ![Image Alt](https://github.com/beatrizzlopes/AWS-Manager-EC2-Bootcamp-DIO-Desafio1/blob/3bd3be6bae11f22235d84c5122af038e04ce78ce/imagens/Diagrama%20sem%20nome.drawio%20(4).png)
+
+1. O usuário acessa o site hospedado na instância EC2.
+
+2. Ao fazer upload de um livro, a EC2 armazena temporariamente os dados no EBS.
+
+3. O arquivo é enviado para o bucket S3, onde é armazenado de forma segura.
+
+4. O S3 aciona uma função Lambda automaticamente após o upload.
+
+5. A Lambda processa os metadados e grava as informações no banco de dados RDS.
+
+6. O EC2 consulta o RDS para exibir os livros disponíveis no site.
+
+7. Arquivos antigos são movidos automaticamente para o S3 Glacier, otimizando custos.
+
+8. Quando solicitado, o EC2 gera um link temporário (presigned URL) para download do livro.
 
 ## Referências
 https://web.dio.me/track/santander-code-girls-2025
-Autora: Beatriz Lopes
+
+## Autora
+Beatriz Lopes
 
 
 
