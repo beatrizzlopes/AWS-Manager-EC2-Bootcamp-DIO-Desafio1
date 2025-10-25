@@ -1,6 +1,6 @@
 # AWS-Manager-EC2-Bootcamp-DIO-Desafio1
 ## AWS EC2 MANAGER
-Este repositório possui minhas anotações e insights adquiridas durante o módulo de Gerenciamento de Instâncias EC2, incluindo o desafio, do bootcamp Santander Code Girls com a DIO, focado em computação em nuvem com AWS.
+Este repositório possui o desafio diagrama de arquitetura e minhas anotações adquiridas durante o módulo de Gerenciamento de Instâncias EC2 do bootcamp Santander Code Girls com a DIO, focado em computação em nuvem com AWS.
 
 ## Objetivo do Desafio
 
@@ -15,54 +15,79 @@ Quaisquer arquivos adicionais que sejam relevantes para documentar sua experiên
 Opcionalmente, capturas de tela relevantes organizadas em uma pasta /images.
 
 ## Material presente no repositório
-Arquivo README.md: Explicação detalhada do desafio e anotações principais do módulo de Gerenciamento de Instâncias EC2.
-
-anotaçoesdesafio1.md: Registro do passo a passo do desafio.
+Arquivo README.md: Explicação detalhada do desafio e anotações do módulo de Gerenciamento de Instâncias EC2.
 
 Imagens: Captura de tela do Desafio.
 
-## Anotações Principais
+## Anotações
 ### Instância correta
 
 Escolher a instância correta na AWS é crucial para garantir eficiência, escalabilidade e economia nos gastos com nuvem
   
 ### Amazon EBS
-Elastic Block Store (EBS), é uma storage altamente confiável que pode ser anexado em qualquer instância EC2. Toda instância possui um volume de armazenamento. Com a EBS conseguimos ter a capacidade de expansão de forma rápida,com apenas alguns clicks.
+O Elastic Block Store (EBS) é um serviço de armazenamento em blocos altamente confiável que pode ser anexado a qualquer instância EC2. Toda instância EC2 possui pelo menos um volume de armazenamento, e com o EBS é possível expandir essa capacidade de forma rápida e simples, com apenas alguns cliques.
 
-Resumo:  É um tipo de storage em bloco, que funciona como um disco rígido virtual que você pode anexar a uma instância EC2.
-Permite armazenar dados de forma confiável e expandir a capacidade rapidamente.
+Resumo:
+O EBS é um tipo de armazenamento em bloco, que funciona como um disco rígido virtual que pode ser anexado a uma instância EC2. Ele permite armazenar dados de forma confiável e aumentar a capacidade de armazenamento de maneira ágil.
 
-Storage = lugar para guardar dados no computador ou na nuvem.
+Storage: local para guardar dados, seja em um computador ou na nuvem.
 
-Snapshot = é uma cópia de segurança de um volume de armazenamento (como o EBS). Ele salva o estado dos dados naquele momento, permitindo que você recupere ou duplique o volume depois.
+Snapshot: é uma cópia de segurança de um volume de armazenamento (como o EBS). Ele registra o estado dos dados em um determinado momento, permitindo que você recupere ou duplique o volume posteriormente.
 
-Restore = é o processo de recuperar os dados a partir de um snapshot, ou seja, restaurar o volume para o estado em que estava quando o snapshot foi feito.
+Restore: é o processo de recuperar os dados a partir de um snapshot, ou seja, restaurar o volume ao estado em que estava no momento em que o snapshot foi criado.
 
 ### Amazon S3
 
-Amazon S3 (Amazon Simple Storage Service) é um serviço de armazenamento de objetos em movem oferecido pela AWS.
+O Amazon S3 é um serviço de armazenamento de objetos em nuvem oferecido pela AWS. Ele permite armazenar e recuperar qualquer quantidade de dados, a qualquer momento e de qualquer lugar da internet, de forma segura, escalável e com alta durabilidade.
+
+Conceitos principais:
+
+Bucket:
+É como uma “pasta” principal onde os arquivos (objetos) são armazenados. Cada bucket tem um nome único e pode conter um número praticamente ilimitado de objetos.
+
+Objeto:
+É o arquivo propriamente dito que você armazena no S3 (por exemplo: imagens, vídeos, documentos, backups etc.). Cada objeto contém os dados, os metadados e uma chave única (nome do arquivo dentro do bucket).
+
+Classes de Armazenamento:
+O S3 oferece diferentes classes de armazenamento, cada uma otimizada para um tipo de uso e custo:
+
+S3 Standard: para dados acessados com frequência.
+
+S3 Intelligent-Tiering: ajusta automaticamente a classe de armazenamento conforme a frequência de acesso.
+
+S3 Standard-IA (Infrequent Access): para dados acessados ocasionalmente.
+
+S3 Glacier / Glacier Deep Archive: para arquivamento e backup de longo prazo, com custo muito baixo.
+
+Vantagens:
+
+Alta durabilidade (99,999999999% ou “11 noves”).
+
+Escalabilidade automática — armazene desde alguns megabytes até petabytes de dados.
+
+Segurança e controle de acesso por políticas e permissões.
+
+Integração fácil com outros serviços da AWS (como EC2, Lambda, CloudFront etc.).
 
 ### Criação e uso de imagens AMI
 
-A imagem de máquina da Amazon (AMI): No Amazon EC2, uma AMI é uma imagem de máquina virtual pré-configurada, que inclui as informações necessárias para iniciar uma instância, como o sistema operativo, o servidonde aplicações e as aplicações.
+A AMI (Amazon Machine Image) é uma imagem pré-configurada usada para criar instâncias EC2.
+Ela contém o sistema operacional, aplicações e configurações necessárias para iniciar um servidor.
 
-Tipos de AMI: Existe diferentes tipos, incluindo Amazon Linux, Windows e outros. Escolhe-se uma AMI com base nos requisitos da aplicação e do sistema.
+Tipos de AMI: Amazon Linux, Windows, Ubuntu e outras.
 
-Diferença AMI e Snapshot:
+AMI x Snapshot:
 
-AMI: faz o backup de um servidor inteiro, incluindo todos os volumes EBS anexados.
+AMI: backup completo de um servidor (inclui todos os volumes EBS).
 
-Snapshot: é uma cópia pontual de um determinado volume. você pode tirar snapshot de seus volumes EBS e salvá-los no armazenamento S3.
+Snapshot: cópia pontual de um volume EBS, armazenada no S3.
 
-## Diagrama de interação dos serviços AWS.
-
-
-
+Resumo da interação:
+O usuário cria uma instância EC2 a partir de uma AMI → usa EBS para armazenamento → snapshots desses volumes são salvos no S3.
 
 ## Referências
 https://web.dio.me/track/santander-code-girls-2025
-## Feito por:
-Beatriz Lopes
+Autora: Beatriz Lopes
 
 
 
