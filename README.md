@@ -85,6 +85,9 @@ Snapshot: cópia pontual de um volume EBS, armazenada no S3.
 Resumo da interação:
 O usuário cria uma instância EC2 a partir de uma AMI → usa EBS para armazenamento → snapshots desses volumes são salvos no S3.
 
+## Desafio diagrama de arquitetura
+![Image Alt](https://github.com/beatrizzlopes/AWS-Manager-EC2-Bootcamp-DIO-Desafio1/blob/3bd3be6bae11f22235d84c5122af038e04ce78ce/imagens/Diagrama%20sem%20nome.drawio%20(4).png)
+
 ## Referências
 https://web.dio.me/track/santander-code-girls-2025
 Autora: Beatriz Lopes
